@@ -10,7 +10,8 @@ function handleSubmit(event) {
     .then(res => res.json())
     .then(function(data) {
         console.log(data)
-        document.getElementById('results').innerHTML = 'Hello ' + data.sentence_list[0].text
+        document.getElementById('results').innerHTML = 
+        `Hello ${data.sentence_list[0].text} , Agreement: ${data.agreement} , Confidence : ${data.confidence} , score_tag : ${data.sentence_list[0].score_tag} `
     })
 }
 
