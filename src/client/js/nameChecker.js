@@ -1,15 +1,18 @@
-function checkForName(inputText) {
-    console.log("::: Running checkForName :::", inputText);
-    let names = [
-        "Picard",
-        "Janeway",
-        "Kirk",
-        "Archer",
-        "Georgiou"
-    ]
+// const Regex = require("regex");
 
-    if(names.includes(inputText)) {
-        alert("Welcome, Captain!")
+function checkForName(inputText) {
+    
+    var match = inputText.match(/[a-zA-Z]+/g)
+
+    if (match == null)
+        return false
+
+    console.log(match)
+
+    if (match.length >= 3) {
+        return true
+    } else {
+        return false
     }
 }
 
